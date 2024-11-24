@@ -10,7 +10,7 @@ $darkColor: #28293E;
 $orangeColor: #EF6D58;
 $lightColor: #FDF0E9;
 $textDarkColor: #391400;
-$textDarkGreyColor: #39140075;
+$textDarkGreyColor: #39140075; // с прозрачностью
 
 .wrapper {
   width: 1440px;
@@ -28,6 +28,10 @@ $textDarkGreyColor: #39140075;
   font-size: 60px;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .dark {
   @extend .big-text;
   color: $darkColor;
@@ -36,24 +40,33 @@ $textDarkGreyColor: #39140075;
 }
 
 .button {
-  background-color: inherit;
-  color: white;
-  padding: 12px 20px;
+  padding: 14px 20px 10px 20px;
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
+}
+
+.button-dark {
+  @extend .button;
+  background-color: inherit;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   &:hover {
-    background-color: white;
-    color: $darkColor;
+    background-color: $orangeColor;
+    color: $lightColor;
+    border: 1px solid $orangeColor;
   }
 }
 
 .button-orange {
   @extend .button;
   background-color: $orangeColor;
+  color: white;
   border: none;
+  &:hover {
+    background-color: $lightColor;
+    color: $darkColor;
+  }
 }
 
 .header {
@@ -107,6 +120,7 @@ $textDarkGreyColor: #39140075;
 
 .help {
   background-color: $lightColor;
+  padding: 32px;
   &_box {
     display: flex;
     flex-direction: column;

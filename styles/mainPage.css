@@ -22,30 +22,42 @@
   font-size: 60px;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .dark {
   color: #28293E;
   width: 460px;
   text-align: center;
 }
 
-.button, .button-orange {
-  background-color: inherit;
-  color: white;
-  padding: 12px 20px;
+.button, .button-orange, .button-dark {
+  padding: 14px 20px 10px 20px;
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
 }
-.button:hover, .button-orange:hover {
-  background-color: white;
-  color: #28293E;
+
+.button-dark {
+  background-color: inherit;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.button-dark:hover {
+  background-color: #EF6D58;
+  color: #FDF0E9;
+  border: 1px solid #EF6D58;
 }
 
 .button-orange {
   background-color: #EF6D58;
+  color: white;
   border: none;
+}
+.button-orange:hover {
+  background-color: #FDF0E9;
+  color: #28293E;
 }
 
 .header {
@@ -98,6 +110,7 @@
 
 .help {
   background-color: #FDF0E9;
+  padding: 32px;
 }
 .help_box {
   display: flex;
