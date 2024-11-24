@@ -1,19 +1,34 @@
 *{
   padding: 0;
   margin: 0;
+  font-family: "Epilogue", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 $darkColor: #28293E;
+$orangeColor: #EF6D58;
 
 .wrapper {
   width: 1440px;
   margin: 0 auto;
 }
 
+.orange-text {
+  color: $orangeColor;
+  line-height: 28px;
+}
+
+.big-text {
+  color: white;
+  font-weight: 800;
+  font-size: 60px;
+}
+
 .button {
   background-color: inherit;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
@@ -23,6 +38,12 @@ $darkColor: #28293E;
     background-color: white;
     color: $darkColor;
   }
+}
+
+.button-orange {
+  @extend .button;
+  background-color: $orangeColor;
+  border: none;
 }
 
 .header {
@@ -49,7 +70,27 @@ $darkColor: #28293E;
     transition: 0.2s;
     &:hover {
       transform: translateY(-1px);
-      
+
+    }
+  }
+}
+
+.about {
+  background-color: $darkColor;
+  color: white;
+  &_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 90px 0px;
+  }
+  &_text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 35px;
+    &__item {
+      width: 460px;
     }
   }
 }
