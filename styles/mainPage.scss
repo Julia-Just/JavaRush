@@ -8,6 +8,9 @@
 
 $darkColor: #28293E;
 $orangeColor: #EF6D58;
+$lightColor: #FDF0E9;
+$textDarkColor: #391400;
+$textDarkGreyColor: #39140075;
 
 .wrapper {
   width: 1440px;
@@ -23,6 +26,13 @@ $orangeColor: #EF6D58;
   color: white;
   font-weight: 800;
   font-size: 60px;
+}
+
+.dark {
+  @extend .big-text;
+  color: $darkColor;
+  width: 460px;
+  text-align: center;
 }
 
 .button {
@@ -92,5 +102,74 @@ $orangeColor: #EF6D58;
     &__item {
       width: 460px;
     }
+  }
+}
+
+.help {
+  background-color: $lightColor;
+  &_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 90px;
+  }
+  &_cards{
+    display: flex;
+    width: 100%;
+  }
+  &_under_cards {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  border: 1px solid #F3D1BF;
+  gap: 20px;
+  width: 50%;
+  box-sizing: border-box;
+  &_box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &_circle {
+    background-color: $orangeColor;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+  }
+  &_big-text {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  &_text {
+    color: #39140075;
+    width: 490px;
+    line-height: 28px;
+  }
+  &_text-btn{
+    font-size: 18px;
+    color: $textDarkColor;
+  }
+  &_btn {
+    background-color: white;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: $orangeColor;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &:last-child{
+    margin-left: -1px;
   }
 }

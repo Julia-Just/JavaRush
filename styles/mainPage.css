@@ -16,10 +16,16 @@
   line-height: 28px;
 }
 
-.big-text {
+.big-text, .dark {
   color: white;
   font-weight: 800;
   font-size: 60px;
+}
+
+.dark {
+  color: #28293E;
+  width: 460px;
+  text-align: center;
 }
 
 .button, .button-orange {
@@ -88,4 +94,73 @@
 }
 .about_text__item {
   width: 460px;
+}
+
+.help {
+  background-color: #FDF0E9;
+}
+.help_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  padding: 90px;
+}
+.help_cards {
+  display: flex;
+  width: 100%;
+}
+.help_under_cards {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  border: 1px solid #F3D1BF;
+  gap: 20px;
+  width: 50%;
+  box-sizing: border-box;
+}
+.card_box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.card_circle {
+  background-color: #EF6D58;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+.card_big-text {
+  font-weight: bold;
+  font-size: 24px;
+}
+.card_text {
+  color: rgba(57, 20, 0, 0.4588235294);
+  width: 490px;
+  line-height: 28px;
+}
+.card_text-btn {
+  font-size: 18px;
+  color: #391400;
+}
+.card_btn {
+  background-color: white;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #EF6D58;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card:last-child {
+  margin-left: -1px;
 }/*# sourceMappingURL=mainPage.css.map */
